@@ -3,10 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Демиденко Артем</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box">
+        <nav>
+            <div class="nav_1">
+                <div class="kolo">
+                    <img src="img/ChatGPT Image 4 черв. 2026 р., 19_19_20.png" alt="">
+                </div>
+                <div class="text_nav1">
+                    <h2>Демиденко Артем</h2>
+                    <p>Frontend Developer</p>
+                </div>
+            </div>
+            <div class="nav_2">
+                <ul class="nav-menu">
+                    <li class="active"><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa-regular fa-user"></i> About</a></li>
+                    <li><a href="#experience"><i class="fa-solid fa-award"></i> Experience</a></li>
+                    <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                    <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header id="home">
+            <div class="header_box">
+                <div class="welcome">
+                    <span class="welcome-star">⭐</span> Ласкаво просимо до мого всесвіту
+                </div>
+                <h1 class="hero-title">
+                    <span class="line1">Frontend Developer</span><br>
+                    <span class="line2">&amp; Creative <span class="coder-word">Coder</span></span>
+                </h1>
+                <div class="hero-divider"></div>
+                <p class="hero-sub">
+                    Я створюю <span class="accent-1">красиві</span>, <span class="accent-2">інтерактивні</span> веб-досвіди з сучасними технологіями.<br>
+                    Захоплений чистим кодом, приголомшливим дизайном та бездоганним UX.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-primary"><i class="fa-solid fa-rocket"></i> Explore My Universe</a>
+                    <a href="#" class="btn-secondary"><i class="fa-regular fa-file"></i> Download CV</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+        </header>
+                <p class="scroll-hint">Scroll to explore</p>
+        <div class="abot_me" id="about">
+            <h2>About Me</h2>
+            <div class="palka"></div>
+            <p class="ppp">Get to know the person behind the <strong class="about_strong">code</strong></p>
+            <div class="about_right">
+                <p>Мене звати Артем Демиденко, я студент 2 курсу електромеханічного коледжу. Захоплююсь фронтенд розробкою та створенням красивих веб-інтерфейсів.</p>
+                <p>Протягом 4 років я навчався у школі комп'ютерної майстерності, де здобув великий багаж практичних навичок — від основ програмування до створення повноцінних веб-проєктів. Саме там я зрозумів, що розробка — це моє покликання.</p>
+                <p>Коли я не пишу код, досліджую нові технології, вивчаю сучасні тренди у веб-розробці та працюю над власними проєктами, щоб постійно вдосконалювати свої навички.</p>
+                <p>Моя мета — поєднати дизайн і розробку, створюючи зручні та візуально привабливі рішення, які справді роблять різницю.</p>
+                <div class="about_stats">
+                    <div class="stat">
+                        <span class="stat_num">2+</span>
+                        <span class="stat_label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat_num stat_purple">15+</span>
+                        <span class="stat_label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat_num stat_green">4</span>
+                        <span class="stat_label">Years in IT School</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about_left">
+                <img src="https://i.pinimg.com/736x/78/0e/2d/780e2d6b249de112eadde767f45bcb01.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const navItems = document.querySelectorAll('.nav-menu li');
+        navItems.forEach(li => {
+            li.addEventListener('click', () => {
+                navItems.forEach(l => l.classList.remove('active'));
+                li.classList.add('active');
+            });
+        });
+
+        const themes = [
+            {
+                kolo:     '#7c3aed',
+                h2:       '#a78bfa',
+                badge:    '#7c3aed',
+                badgeGlow:'rgba(124,58,237,0.4)',
+                line1a:   '#818cf8', line1b: '#a78bfa', line1c: '#c084fc',
+                codera:   '#a855f7', coderb: '#818cf8',
+                divider:  '#7c3aed, #a855f7',
+                accent1:  '#818cf8',
+                accent2:  '#a855f7',
+                btnA:     '#7c3aed', btnB: '#a855f7',
+                btnGlow:  'rgba(124,58,237,0.5)',
+            },
+            {
+                kolo:     '#ec4899',
+                h2:       '#f472b6',
+                badge:    '#ec4899',
+                badgeGlow:'rgba(236,72,153,0.4)',
+                line1a:   '#f472b6', line1b: '#ec4899', line1c: '#fb7185',
+                codera:   '#ec4899', coderb: '#f43f5e',
+                divider:  '#ec4899, #f43f5e',
+                accent1:  '#f472b6',
+                accent2:  '#ec4899',
+                btnA:     '#be185d', btnB: '#ec4899',
+                btnGlow:  'rgba(236,72,153,0.5)',
+            },
+            {
+                kolo:     '#f97316',
+                h2:       '#fb923c',
+                badge:    '#f97316',
+                badgeGlow:'rgba(249,115,22,0.4)',
+                line1a:   '#fb923c', line1b: '#f97316', line1c: '#fbbf24',
+                codera:   '#f59e0b', coderb: '#f97316',
+                divider:  '#f97316, #fbbf24',
+                accent1:  '#fb923c',
+                accent2:  '#f59e0b',
+                btnA:     '#c2410c', btnB: '#f97316',
+                btnGlow:  'rgba(249,115,22,0.5)',
+            },
+        ];
+
+        let current = 0;
+
+        function applyTheme(t) {
+            document.querySelector('.kolo').style.background = t.kolo;
+            document.querySelector('.nav_1 h2').style.color = t.h2;
+
+            const badge = document.querySelector('.welcome');
+            badge.style.borderColor = t.badge;
+            badge.style.boxShadow = `0 0 18px ${t.badgeGlow}`;
+
+            document.querySelector('.line1').style.backgroundImage =
+                `linear-gradient(90deg, ${t.line1a}, ${t.line1b}, ${t.line1c})`;
+            document.querySelector('.coder-word').style.backgroundImage =
+                `linear-gradient(90deg, ${t.codera}, ${t.coderb})`;
+            document.querySelector('.hero-divider').style.background =
+                `linear-gradient(90deg, ${t.divider})`;
+
+            document.querySelector('.accent-1').style.color = t.accent1;
+            document.querySelector('.accent-2').style.color = t.accent2;
+
+            const btn = document.querySelector('.btn-primary');
+            btn.style.background = `linear-gradient(135deg, ${t.btnA}, ${t.btnB})`;
+            btn.style.boxShadow = `0 4px 20px ${t.btnGlow}`;
+
+            document.querySelector('.abot_me h2').style.color = t.accent1;
+            document.querySelector('.palka').style.background = t.accent1;
+            document.querySelector('.about_strong').style.color = t.accent2;
+            document.querySelector('.stat_purple').style.color = t.accent2;
+            document.querySelector('.stat_green').style.color = t.accent1;
+        }
+
+        applyTheme(themes[current]);
+
+        setInterval(() => {
+            current = (current + 1) % themes.length;
+            applyTheme(themes[current]);
+        }, 10000);
+    </script>
 </body>
 </html>
