@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+    <div id="cursor-blob"></div>
+    <div id="toast"><i class="fa-solid fa-check"></i> <span id="toast-msg">Copied!</span></div>
+    <a id="scrollTop" href="#home" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home"       class="active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about">     <i class="fa-regular fa-user"></i> About</a>
+        <a href="#experience"><i class="fa-solid fa-award"></i> Experience</a>
+        <a href="#skills">    <i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects">  <i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a href="#contact">   <i class="fa-regular fa-envelope"></i> Contact</a>
+    </div>
+
     <div class="box">
         <nav>
             <div class="nav_1">
@@ -28,6 +43,9 @@
                     <li><a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
                     <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a></li>
                 </ul>
+            </div>
+            <div class="nav-burger" id="burger">
+                <span></span><span></span><span></span>
             </div>
         </nav>
 
@@ -50,35 +68,36 @@
                     <a href="#" class="btn-secondary"><i class="fa-regular fa-file"></i> Download CV</a>
                 </div>
                 <div class="hero-socials">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/Demidenko-Art" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="mailto:artemdemidenko285@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
         </header>
 
         <p class="scroll-hint">Scroll to explore</p>
 
+        <!-- ABOUT -->
         <div class="abot_me" id="about">
             <h2>About Me</h2>
             <div class="palka"></div>
             <p class="ppp">Get to know the person behind the <strong class="about_strong">code</strong></p>
             <div class="about_right">
                 <p>Мене звати Артем Демиденко, я студент 2 курсу електромеханічного коледжу. Захоплююсь фронтенд розробкою та створенням красивих веб-інтерфейсів.</p>
-                <p>Протягом 4 років я навчався у школі комп'ютерної майстерності, де здобув великий багаж практичних навичок — від основ програмування до створення повноцінних веб-проєктів. Саме там я зрозумів, що розробка — це моє покликання.</p>
+                <p>Протягом 4 років я навчався у школі комп'ютерної майстерності, де здобув великий багаж практичних навичок - від основ програмування до створення повноцінних веб-проєктів. Саме там я зрозумів, що розробка - це моє покликання.</p>
                 <p>Коли я не пишу код, досліджую нові технології, вивчаю сучасні тренди у веб-розробці та працюю над власними проєктами, щоб постійно вдосконалювати свої навички.</p>
-                <p>Моя мета — поєднати дизайн і розробку, створюючи зручні та візуально привабливі рішення, які справді роблять різницю.</p>
+                <p>Моя мета - поєднати дизайн і розробку, створюючи зручні та візуально привабливі рішення, які справді роблять різницю.</p>
                 <div class="about_stats">
                     <div class="stat">
-                        <span class="stat_num">2+</span>
+                        <span class="stat_num" data-target="2" data-suffix="+">0</span>
                         <span class="stat_label">Years Experience</span>
                     </div>
                     <div class="stat">
-                        <span class="stat_num stat_purple">15+</span>
+                        <span class="stat_num stat_purple" data-target="15" data-suffix="+">0</span>
                         <span class="stat_label">Projects Completed</span>
                     </div>
                     <div class="stat">
-                        <span class="stat_num stat_green">4</span>
+                        <span class="stat_num stat_green" data-target="4" data-suffix="">0</span>
                         <span class="stat_label">Years in IT School</span>
                     </div>
                 </div>
@@ -88,21 +107,21 @@
             </div>
         </div>
 
+        <!-- EXPERIENCE -->
         <section class="section_block" id="experience">
             <h2 class="section_title reveal">Experience</h2>
             <div class="palka section_palka reveal"></div>
             <p class="ppp reveal">My journey through <strong class="about_strong">learning</strong> and <strong class="about_strong2">building</strong></p>
 
             <div class="exp_timeline">
-
                 <div class="exp_card reveal">
                     <div class="exp_dot"></div>
-                    <div class="exp_year">2024 — Present</div>
+                    <div class="exp_year">2024 - Present</div>
                     <div class="exp_content">
                         <div class="exp_header">
                             <span class="exp_badge"><i class="fa-solid fa-graduation-cap"></i></span>
                             <div>
-                                <h3 class="exp_role">Student — Electromechanical College</h3>
+                                <h3 class="exp_role">Student - Electromechanical College</h3>
                                 <span class="exp_company">2nd year · Dnipro</span>
                             </div>
                         </div>
@@ -124,7 +143,7 @@
                                 <span class="exp_company">Electromechanical College · Dnipro</span>
                             </div>
                         </div>
-                        <p class="exp_desc">Взяв участь у Кубку України з програмування, представляючи електромеханічний коледж. Змагання охоплювали алгоритмічні задачі, веб-розробку та командне вирішення нестандартних задач під тиском часу — безцінний досвід для прокачки навичок у реальних умовах.</p>
+                        <p class="exp_desc">Взяв участь у Кубку України з програмування, представляючи електромеханічний коледж. Змагання охоплювали алгоритмічні задачі, веб-розробку та командне вирішення нестандартних задач під тиском часу.</p>
                         <div class="exp_award_badge">
                             <i class="fa-solid fa-medal"></i> Учасник всеукраїнських змагань
                         </div>
@@ -136,43 +155,27 @@
 
                 <div class="exp_card reveal">
                     <div class="exp_dot"></div>
-                    <div class="exp_year">2022 — 2024</div>
+                    <div class="exp_year">2022 - 2026</div>
                     <div class="exp_content">
                         <div class="exp_header">
                             <span class="exp_badge"><i class="fa-solid fa-school"></i></span>
                             <div>
-                                <h3 class="exp_role">Student — IT School of Computer Mastery</h3>
+                                <h3 class="exp_role">Student - IT School of Computer Mastery</h3>
                                 <span class="exp_company">4 years intensive training</span>
                             </div>
                         </div>
-                        <p class="exp_desc">Пройшов 4-річний курс практичних навичок: від основ програмування до повноцінних веб-проєктів. Саме тут зрозумів, що розробка — моє покликання.</p>
+                        <p class="exp_desc">Пройшов 4-річний курс практичних навичок: від основ програмування до повноцінних веб-проєктів. Саме тут зрозумів, що розробка - моє покликання.</p>
                         <div class="exp_tags">
                             <span class="tag">Основи програмування</span><span class="tag">Web Projects</span><span class="tag">Teamwork</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="exp_card reveal">
-                    <div class="exp_dot"></div>
-                    <div class="exp_year">2022 — 2023</div>
-                    <div class="exp_content">
-                        <div class="exp_header">
-                            <span class="exp_badge"><i class="fa-solid fa-code"></i></span>
-                            <div>
-                                <h3 class="exp_role">First Personal Projects</h3>
-                                <span class="exp_company">Self-taught · Freelance</span>
-                            </div>
-                        </div>
-                        <p class="exp_desc">Розпочав створення власних веб-сайтів та проєктів. Отримав перший практичний досвід роботи з реальними завданнями та дедлайнами.</p>
-                        <div class="exp_tags">
-                            <span class="tag">HTML/CSS</span><span class="tag">Responsive Design</span><span class="tag">Git</span>
-                        </div>
-                    </div>
-                </div>
-
+                
             </div>
         </section>
 
+        <!-- SKILLS -->
         <section class="section_block" id="skills">
             <h2 class="section_title reveal">Skills &amp; Technologies</h2>
             <div class="palka section_palka reveal"></div>
@@ -185,87 +188,22 @@
                         <h3 class="skill_cat_title">Frontend</h3>
                     </div>
                     <div class="skill_items">
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">HTML5</span>
-                                <span class="skill_pct">95%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">CSS3 / SCSS</span>
-                                <span class="skill_pct">88%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">JavaScript</span>
-                                <span class="skill_pct">75%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">Responsive Design</span>
-                                <span class="skill_pct">90%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="90"></div>
-                            </div>
-                        </div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">HTML5</span><span class="skill_pct">95%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="95"></div></div></div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">CSS3 / SCSS</span><span class="skill_pct">88%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="88"></div></div></div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">JavaScript</span><span class="skill_pct">75%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="75"></div></div></div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">Responsive Design</span><span class="skill_pct">90%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="90"></div></div></div>
                     </div>
                 </div>
-
                 <div class="skill_category reveal">
                     <div class="skill_cat_header">
                         <i class="fa-solid fa-wand-magic-sparkles skill_cat_icon"></i>
                         <h3 class="skill_cat_title">Design &amp; Tools</h3>
                     </div>
                     <div class="skill_items">
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">Figma</span>
-                                <span class="skill_pct">80%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">Git / GitHub</span>
-                                <span class="skill_pct">70%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">UI/UX Principles</span>
-                                <span class="skill_pct">82%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="82"></div>
-                            </div>
-                        </div>
-                        <div class="skill_item">
-                            <div class="skill_info">
-                                <span class="skill_name">VS Code</span>
-                                <span class="skill_pct">92%</span>
-                            </div>
-                            <div class="skill_bar_wrap">
-                                <div class="skill_bar" data-width="92"></div>
-                            </div>
-                        </div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">Figma</span><span class="skill_pct">80%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="80"></div></div></div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">Git / GitHub</span><span class="skill_pct">70%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="70"></div></div></div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">UI/UX Principles</span><span class="skill_pct">82%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="82"></div></div></div>
+                        <div class="skill_item"><div class="skill_info"><span class="skill_name">VS Code</span><span class="skill_pct">92%</span></div><div class="skill_bar_wrap"><div class="skill_bar" data-width="92"></div></div></div>
                     </div>
                 </div>
             </div>
@@ -282,158 +220,531 @@
             </div>
         </section>
 
-    </div>
+        <!-- FEATURED PROJECTS -->
+        <section class="section_block" id="projects">
+            <h2 class="section_title reveal">Featured Projects</h2>
+            <div class="palka section_palka reveal"></div>
+            <p class="ppp reveal">Things I've <strong class="about_strong">built</strong> with passion &amp; <strong class="about_strong2">purpose</strong></p>
+
+            <div class="projects_grid">
+
+                <div class="proj_card reveal">
+                    <div class="proj_visual proj_visual--shop">
+                        <div class="proj_visual_inner">
+                            <div class="proj_mockup">
+                                <div class="pm_bar">
+                                    <span class="pm_dot"></span><span class="pm_dot"></span><span class="pm_dot"></span>
+                                    <div class="pm_url">shop.artdesign.ua</div>
+                                </div>
+                                <div class="pm_body">
+                                    <div class="pm_hero_line"></div>
+                                    <div class="pm_cards_row">
+                                        <div class="pm_card"><div class="pm_card_img"></div><div class="pm_card_line pm_line_s"></div><div class="pm_card_line pm_line_m"></div></div>
+                                        <div class="pm_card"><div class="pm_card_img"></div><div class="pm_card_line pm_line_s"></div><div class="pm_card_line pm_line_m"></div></div>
+                                        <div class="pm_card"><div class="pm_card_img"></div><div class="pm_card_line pm_line_s"></div><div class="pm_card_line pm_line_m"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj_tag_float">E-Commerce</div>
+                    </div>
+                    <div class="proj_info">
+                        <div class="proj_num">01</div>
+                        <h3 class="proj_name">ArtShop - Online Store</h3>
+                        <p class="proj_desc">Сучасний інтернет-магазин з каталогом товарів, кошиком, фільтрацією та адаптивним дизайном. Швидка навігація, зручний UX та приємний інтерфейс покупця.</p>
+                        <div class="proj_stack">
+                            <span class="p_tag">HTML5</span><span class="p_tag">CSS3</span><span class="p_tag">JavaScript</span><span class="p_tag">Responsive</span>
+                        </div>
+                        <div class="proj_links">
+                            <a href="#" class="proj_btn proj_btn--primary"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                            <a href="#" class="proj_btn proj_btn--ghost"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj_card proj_card--rev reveal">
+                    <div class="proj_visual proj_visual--travel">
+                        <div class="proj_visual_inner">
+                            <div class="proj_mockup">
+                                <div class="pm_bar">
+                                    <span class="pm_dot"></span><span class="pm_dot"></span><span class="pm_dot"></span>
+                                    <div class="pm_url">wanderlust-ua.com</div>
+                                </div>
+                                <div class="pm_body pm_body--travel">
+                                    <div class="pm_travel_hero">
+                                        <div class="pm_travel_text">
+                                            <div class="pm_line pm_line--w60 pm_line--bright"></div>
+                                            <div class="pm_line pm_line--w40"></div>
+                                        </div>
+                                        <div class="pm_travel_pill">Explore →</div>
+                                    </div>
+                                    <div class="pm_dest_row">
+                                        <div class="pm_dest pm_dest--tall"></div>
+                                        <div class="pm_dest_col">
+                                            <div class="pm_dest pm_dest--sm"></div>
+                                            <div class="pm_dest pm_dest--sm"></div>
+                                        </div>
+                                        <div class="pm_dest pm_dest--tall"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj_tag_float">Travel</div>
+                    </div>
+                    <div class="proj_info">
+                        <div class="proj_num">02</div>
+                        <h3 class="proj_name">Wanderlust - Travel Guide</h3>
+                        <p class="proj_desc">Веб-сайт для мандрівників з маршрутами, галереєю напрямків та інтерактивною картою. Атмосферний дизайн, що передає дух подорожей та нових вражень.</p>
+                        <div class="proj_stack">
+                            <span class="p_tag">HTML5</span><span class="p_tag">CSS3</span><span class="p_tag">JavaScript</span><span class="p_tag">Figma</span>
+                        </div>
+                        <div class="proj_links">
+                            <a href="#" class="proj_btn proj_btn--primary"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                            <a href="#" class="proj_btn proj_btn--ghost"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj_card reveal">
+                    <div class="proj_visual proj_visual--flowers">
+                        <div class="proj_visual_inner">
+                            <div class="proj_mockup">
+                                <div class="pm_bar">
+                                    <span class="pm_dot"></span><span class="pm_dot"></span><span class="pm_dot"></span>
+                                    <div class="pm_url">bloom-studio.ua</div>
+                                </div>
+                                <div class="pm_body pm_body--flowers">
+                                    <div class="pm_fl_hero">
+                                        <div class="pm_fl_badge">🌸 New Collection</div>
+                                        <div class="pm_line pm_line--w70 pm_line--bright"></div>
+                                        <div class="pm_line pm_line--w50"></div>
+                                    </div>
+                                    <div class="pm_fl_row">
+                                        <div class="pm_fl_card"><div class="pm_fl_img"></div><div class="pm_fl_price"></div></div>
+                                        <div class="pm_fl_card pm_fl_card--feat"><div class="pm_fl_img"></div><div class="pm_fl_price pm_fl_price--a"></div></div>
+                                        <div class="pm_fl_card"><div class="pm_fl_img"></div><div class="pm_fl_price"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj_tag_float">Flowers</div>
+                    </div>
+                    <div class="proj_info">
+                        <div class="proj_num">03</div>
+                        <h3 class="proj_name">Bloom Studio - Flower Shop</h3>
+                        <p class="proj_desc">Елегантний сайт квіткової студії з каталогом букетів, онлайн-замовленням та галереєю робіт. Ніжна естетика та плавна анімація створюють особливу атмосферу.</p>
+                        <div class="proj_stack">
+                            <span class="p_tag">HTML5</span><span class="p_tag">CSS3</span><span class="p_tag">JavaScript</span><span class="p_tag">UI/UX</span>
+                        </div>
+                        <div class="proj_links">
+                            <a href="#" class="proj_btn proj_btn--primary"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                            <a href="#" class="proj_btn proj_btn--ghost"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GET IN TOUCH -->
+        <section class="section_block contact_section" id="contact">
+            <h2 class="section_title reveal">Get in Touch</h2>
+            <div class="palka section_palka reveal"></div>
+            <p class="ppp reveal">Have a project in mind? Let's <strong class="about_strong">create</strong> something <strong class="about_strong2">amazing</strong> together</p>
+
+            <div class="contact_wrap reveal">
+                <div class="contact_left">
+                    <div class="contact_card" onclick="copyToClipboard('artemdemidenko285@gmail.com','Email скопійовано!')">
+                        <div class="contact_card_icon contact-icon-email"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <div class="contact_card_label">Email - click to copy</div>
+                            <div class="contact_card_val">artemdemidenko285@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact_card">
+                        <div class="contact_card_icon contact-icon-tg"><i class="fa-brands fa-telegram"></i></div>
+                        <div>
+                            <div class="contact_card_label">Telegram</div>
+                            <a href="https://t.me/Phantomgoul" class="contact_card_val" target="_blank">@Phantomgoul</a>
+                        </div>
+                    </div>
+                    <div class="contact_card">
+                        <div class="contact_card_icon contact-icon-gh"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <div class="contact_card_label">GitHub</div>
+                            <a href="https://github.com/Demidenko-Art" class="contact_card_val" target="_blank">Demidenko-Art</a>
+                        </div>
+                    </div>
+                    <div class="contact_available">
+                        <span class="available_dot"></span>
+                        Available for freelance &amp; collaboration
+                    </div>
+                </div>
+
+                <div class="contact_right">
+                    <form class="contact_form" onsubmit="handleFormSubmit(event)">
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label class="form_label">Your Name</label>
+                                <input type="text" class="form_input" placeholder="Демиденко Артем" required />
+                            </div>
+                            <div class="form_group">
+                                <label class="form_label">Email</label>
+                                <input type="email" class="form_input" placeholder="email@example.com" required />
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label class="form_label">Subject</label>
+                            <input type="text" class="form_input" placeholder="Розробка сайту / Freelance / Collaboration" />
+                        </div>
+                        <div class="form_group">
+                            <label class="form_label">Message</label>
+                            <textarea class="form_input form_textarea" placeholder="Розкажи про свій проєкт..."></textarea>
+                        </div>
+                        <button type="submit" class="form_submit">
+                            <span class="form_submit_text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                            <span class="form_submit_sent" style="display:none"><i class="fa-solid fa-check"></i> Sent!</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /.box -->
+
+    <!-- FOOTER -->
+    <footer class="site_footer">
+        <div class="footer_inner">
+            <div class="footer_brand">
+                <div class="footer_logo" id="footerLogo">AD</div>
+                <div>
+                    <div class="footer_name">Демиденко Артем</div>
+                    <div class="footer_role">Frontend Developer · Dnipro, Ukraine</div>
+                </div>
+            </div>
+            <div class="footer_nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer_socials">
+                <a href="https://github.com/Demidenko-Art" target="_blank" class="footer_social_link"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="footer_social_link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://t.me/Phantomgoul" target="_blank" class="footer_social_link"><i class="fa-brands fa-telegram"></i></a>
+                <a href="mailto:artemdemidenko285@gmail.com" class="footer_social_link"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <span>© 2026 Демиденко Артем. Crafted with <span class="footer_heart">♥</span> and clean code.</span>
+        </div>
+    </footer>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const target = document.querySelector(targetId);
-                if (!target) return;
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
+    /* ══════════ CURSOR BLOB ══════════ */
+    const blob = document.getElementById('cursor-blob');
+    let blobX = 0, blobY = 0, mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+    (function animateBlob() {
+        blobX += (mouseX - blobX) * 0.07;
+        blobY += (mouseY - blobY) * 0.07;
+        blob.style.left = blobX + 'px';
+        blob.style.top  = blobY + 'px';
+        requestAnimationFrame(animateBlob);
+    })();
+
+    /* ══════════ BURGER MENU ══════════ */
+    const burger     = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+        const isOpen = burger.classList.toggle('open');
+        mobileMenu.classList.toggle('open', isOpen);
+        mobileMenu.style.display = isOpen ? 'flex' : 'none';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            burger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            mobileMenu.style.display = 'none';
         });
+    });
 
-        const navItems = document.querySelectorAll('.nav-menu li');
-        navItems.forEach(li => {
-            li.addEventListener('click', () => {
-                navItems.forEach(l => l.classList.remove('active'));
-                li.classList.add('active');
-            });
-        });
-
-        const sections = document.querySelectorAll('header[id], div[id], section[id]');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(sec => {
-                const top = sec.offsetTop - 120;
-                if (window.scrollY >= top) current = sec.getAttribute('id');
-            });
-            navItems.forEach(li => {
-                li.classList.remove('active');
-                const a = li.querySelector('a');
-                if (a && a.getAttribute('href') === '#' + current) {
-                    li.classList.add('active');
-                }
-            });
-        });
-
-        const themes = [
-            {
-                kolo:'#7c3aed', h2:'#a78bfa', badge:'#7c3aed', badgeGlow:'rgba(124,58,237,0.4)',
-                line1a:'#818cf8', line1b:'#a78bfa', line1c:'#c084fc',
-                codera:'#a855f7', coderb:'#818cf8',
-                divider:'#7c3aed, #a855f7',
-                accent1:'#818cf8', accent2:'#a855f7',
-                btnA:'#7c3aed', btnB:'#a855f7', btnGlow:'rgba(124,58,237,0.5)',
-            },
-            {
-                kolo:'#ec4899', h2:'#f472b6', badge:'#ec4899', badgeGlow:'rgba(236,72,153,0.4)',
-                line1a:'#f472b6', line1b:'#ec4899', line1c:'#fb7185',
-                codera:'#ec4899', coderb:'#f43f5e',
-                divider:'#ec4899, #f43f5e',
-                accent1:'#f472b6', accent2:'#ec4899',
-                btnA:'#be185d', btnB:'#ec4899', btnGlow:'rgba(236,72,153,0.5)',
-            },
-            {
-                kolo:'#f97316', h2:'#fb923c', badge:'#f97316', badgeGlow:'rgba(249,115,22,0.4)',
-                line1a:'#fb923c', line1b:'#f97316', line1c:'#fbbf24',
-                codera:'#f59e0b', coderb:'#f97316',
-                divider:'#f97316, #fbbf24',
-                accent1:'#fb923c', accent2:'#f59e0b',
-                btnA:'#c2410c', btnB:'#f97316', btnGlow:'rgba(249,115,22,0.5)',
-            },
-        ];
-
-        let currentTheme = 0;
-
-        function applyTheme(t) {
-            document.querySelector('.kolo').style.background = t.kolo;
-            document.querySelector('.nav_1 h2').style.color = t.h2;
-
-            const badge = document.querySelector('.welcome');
-            badge.style.borderColor = t.badge;
-            badge.style.boxShadow = `0 0 18px ${t.badgeGlow}`;
-
-            document.querySelector('.line1').style.backgroundImage =
-                `linear-gradient(90deg, ${t.line1a}, ${t.line1b}, ${t.line1c})`;
-            document.querySelector('.coder-word').style.backgroundImage =
-                `linear-gradient(90deg, ${t.codera}, ${t.coderb})`;
-            document.querySelector('.hero-divider').style.background =
-                `linear-gradient(90deg, ${t.divider})`;
-
-            document.querySelector('.accent-1').style.color = t.accent1;
-            document.querySelector('.accent-2').style.color = t.accent2;
-
-            const btn = document.querySelector('.btn-primary');
-            btn.style.background = `linear-gradient(135deg, ${t.btnA}, ${t.btnB})`;
-            btn.style.boxShadow = `0 4px 20px ${t.btnGlow}`;
-
-            document.querySelector('.abot_me h2').style.color = t.accent1;
-            document.querySelector('.palka').style.background = t.accent1;
-            document.querySelector('.about_strong').style.color = t.accent2;
-            document.querySelector('.stat_purple').style.color = t.accent2;
-            document.querySelector('.stat_green').style.color = t.accent1;
-
-            const hint = document.querySelector('.scroll-hint');
-            hint.style.color = t.accent1;
-            hint.style.textShadow = `0 0 12px ${t.badgeGlow}`;
-
-            document.querySelectorAll('.section_title').forEach(el => el.style.color = t.accent1);
-            document.querySelectorAll('.section_palka').forEach(el => el.style.background = t.accent1);
-            document.querySelectorAll('.about_strong').forEach(el => el.style.color = t.accent2);
-            document.querySelectorAll('.about_strong2').forEach(el => el.style.color = t.accent2);
-
-            document.querySelectorAll('.exp_dot').forEach(el => {
-                el.style.background = t.accent1;
-                el.style.boxShadow = `0 0 12px ${t.badgeGlow}`;
-            });
-            document.querySelectorAll('.exp_year').forEach(el => el.style.color = t.accent1);
-            document.querySelectorAll('.exp_badge').forEach(el => {
-                el.style.background = `linear-gradient(135deg, ${t.btnA}, ${t.btnB})`;
-            });
-            document.querySelectorAll('.tag').forEach(el => {
-                el.style.borderColor = t.accent1 + '55';
-                el.style.color = t.accent1;
-            });
-            document.querySelectorAll('.exp_award_badge').forEach(el => {
-                el.style.background = `linear-gradient(135deg, ${t.btnA}22, ${t.btnB}22)`;
-                el.style.borderColor = t.accent1 + '66';
-                el.style.color = t.accent1;
-            });
-
-            document.querySelectorAll('.skill_bar').forEach(el => {
-                el.style.background = `linear-gradient(90deg, ${t.btnA}, ${t.btnB})`;
-            });
-            document.querySelectorAll('.skill_pct').forEach(el => el.style.color = t.accent1);
-            document.querySelectorAll('.skill_cat_icon').forEach(el => el.style.color = t.accent1);
-
-            document.documentElement.style.setProperty('--accent-1', t.accent1);
-            document.documentElement.style.setProperty('--accent-glow', t.badgeGlow);
+    // Close on outside click
+    document.addEventListener('click', e => {
+        if (!burger.contains(e.target) && !mobileMenu.contains(e.target)) {
+            burger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            mobileMenu.style.display = 'none';
         }
+    });
 
+    /* ══════════ SCROLL-TO-TOP ══════════ */
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 600);
+    });
+
+    /* ══════════ TOAST ══════════ */
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        document.getElementById('toast-msg').textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2500);
+    }
+    function copyToClipboard(text, msg) {
+        navigator.clipboard.writeText(text).then(() => showToast(msg || 'Copied!'));
+    }
+
+    /* ══════════ SMOOTH SCROLL & ACTIVE NAV ══════════ */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const id = this.getAttribute('href');
+            if (id === '#') return;
+            const target = document.querySelector(id);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    const navItems = document.querySelectorAll('.nav-menu li');
+    navItems.forEach(li => {
+        li.addEventListener('click', () => {
+            navItems.forEach(l => l.classList.remove('active'));
+            li.classList.add('active');
+        });
+    });
+
+    const allSections = document.querySelectorAll('header[id], div[id], section[id]');
+    function updateActiveNav() {
+        let current = '';
+        allSections.forEach(sec => {
+            if (window.scrollY >= sec.offsetTop - 140) current = sec.getAttribute('id');
+        });
+        // desktop nav
+        navItems.forEach(li => {
+            li.classList.remove('active');
+            const a = li.querySelector('a');
+            if (a && a.getAttribute('href') === '#' + current) li.classList.add('active');
+        });
+        // mobile menu
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav);
+
+    /* ══════════ COUNT-UP ══════════ */
+    function animateCountUp(el) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        let n = 0;
+        const step = 1200 / target;
+        const timer = setInterval(() => {
+            n++;
+            el.textContent = n + suffix;
+            if (n >= target) {
+                clearInterval(timer);
+                el.classList.add('pop');
+                setTimeout(() => el.classList.remove('pop'), 400);
+            }
+        }, step);
+    }
+
+    const statsObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.counted) {
+                entry.target.dataset.counted = '1';
+                animateCountUp(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat_num[data-target]').forEach(el => statsObserver.observe(el));
+
+    /* ══════════ FORM SUBMIT ══════════ */
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        const btn    = e.target.querySelector('.form_submit');
+        const textEl = btn.querySelector('.form_submit_text');
+        const sentEl = btn.querySelector('.form_submit_sent');
+        textEl.style.display = 'none';
+        sentEl.style.display = 'flex';
+        btn.style.opacity = '0.8';
+        showToast('Повідомлення надіслано! 🎉');
+        setTimeout(() => {
+            textEl.style.display = 'flex';
+            sentEl.style.display = 'none';
+            btn.style.opacity = '1';
+            e.target.reset();
+        }, 2800);
+    }
+
+    /* ══════════ THEME CYCLING ══════════ */
+    const themes = [
+        {
+            kolo:'#7c3aed', h2:'#a78bfa', badge:'#7c3aed', badgeGlow:'rgba(124,58,237,0.4)',
+            line1a:'#818cf8', line1b:'#a78bfa', line1c:'#c084fc',
+            codera:'#a855f7', coderb:'#818cf8',
+            divider:'#7c3aed, #a855f7',
+            accent1:'#818cf8', accent2:'#a855f7',
+            btnA:'#7c3aed', btnB:'#a855f7', btnGlow:'rgba(124,58,237,0.5)',
+        },
+        {
+            kolo:'#ec4899', h2:'#f472b6', badge:'#ec4899', badgeGlow:'rgba(236,72,153,0.4)',
+            line1a:'#f472b6', line1b:'#ec4899', line1c:'#fb7185',
+            codera:'#ec4899', coderb:'#f43f5e',
+            divider:'#ec4899, #f43f5e',
+            accent1:'#f472b6', accent2:'#ec4899',
+            btnA:'#be185d', btnB:'#ec4899', btnGlow:'rgba(236,72,153,0.5)',
+        },
+        {
+            kolo:'#f97316', h2:'#fb923c', badge:'#f97316', badgeGlow:'rgba(249,115,22,0.4)',
+            line1a:'#fb923c', line1b:'#f97316', line1c:'#fbbf24',
+            codera:'#f59e0b', coderb:'#f97316',
+            divider:'#f97316, #fbbf24',
+            accent1:'#fb923c', accent2:'#f59e0b',
+            btnA:'#c2410c', btnB:'#f97316', btnGlow:'rgba(249,115,22,0.5)',
+        },
+    ];
+    let currentTheme = 0;
+
+    function applyTheme(t) {
+        document.querySelector('.kolo').style.background = t.kolo;
+        document.querySelector('.nav_1 h2').style.color  = t.h2;
+
+        const badge = document.querySelector('.welcome');
+        badge.style.borderColor = t.badge;
+        badge.style.boxShadow   = `0 0 18px ${t.badgeGlow}`;
+
+        document.querySelector('.line1').style.backgroundImage =
+            `linear-gradient(90deg,${t.line1a},${t.line1b},${t.line1c})`;
+        document.querySelector('.coder-word').style.backgroundImage =
+            `linear-gradient(90deg,${t.codera},${t.coderb})`;
+        document.querySelector('.hero-divider').style.background =
+            `linear-gradient(90deg,${t.divider})`;
+
+        document.querySelector('.accent-1').style.color = t.accent1;
+        document.querySelector('.accent-2').style.color = t.accent2;
+
+        const btnPrimary = document.querySelector('.btn-primary');
+        btnPrimary.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
+        btnPrimary.style.boxShadow  = `0 4px 20px ${t.btnGlow}`;
+
+        document.querySelector('.abot_me h2').style.color = t.accent1;
+        document.querySelector('.palka').style.background = t.accent1;
+        document.querySelector('.stat_purple').style.color = t.accent2;
+        document.querySelector('.stat_green').style.color  = t.accent1;
+
+        const hint = document.querySelector('.scroll-hint');
+        hint.style.color      = t.accent1;
+        hint.style.textShadow = `0 0 12px ${t.badgeGlow}`;
+
+        document.querySelectorAll('.section_title').forEach(el => el.style.color = t.accent1);
+        document.querySelectorAll('.section_palka').forEach(el => el.style.background = t.accent1);
+        document.querySelectorAll('.about_strong').forEach(el  => el.style.color = t.accent2);
+        document.querySelectorAll('.about_strong2').forEach(el => el.style.color = t.accent2);
+
+        document.querySelectorAll('.exp_dot').forEach(el => {
+            el.style.background = t.accent1;
+            el.style.boxShadow  = `0 0 12px ${t.badgeGlow}`;
+        });
+        document.querySelectorAll('.exp_year').forEach(el => el.style.color = t.accent1);
+        document.querySelectorAll('.exp_badge').forEach(el => {
+            el.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
+        });
+        document.querySelectorAll('.tag').forEach(el => {
+            el.style.borderColor = t.accent1 + '55';
+            el.style.color = t.accent1;
+        });
+        document.querySelectorAll('.exp_award_badge').forEach(el => {
+            el.style.background   = `linear-gradient(135deg,${t.btnA}22,${t.btnB}22)`;
+            el.style.borderColor  = t.accent1 + '66';
+            el.style.color = t.accent1;
+        });
+        document.querySelectorAll('.skill_bar').forEach(el => {
+            el.style.background = `linear-gradient(90deg,${t.btnA},${t.btnB})`;
+        });
+        document.querySelectorAll('.skill_pct').forEach(el => el.style.color = t.accent1);
+        document.querySelectorAll('.skill_cat_icon').forEach(el => el.style.color = t.accent1);
+
+        /* Projects */
+        document.querySelectorAll('.proj_num').forEach(el => el.style.color = t.accent1);
+        document.querySelectorAll('.p_tag').forEach(el => {
+            el.style.borderColor = t.accent1 + '55';
+            el.style.color = t.accent1;
+        });
+        document.querySelectorAll('.proj_btn--primary').forEach(el => {
+            el.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
+            el.style.boxShadow  = `0 4px 16px ${t.btnGlow}`;
+        });
+        document.querySelectorAll('.proj_tag_float').forEach(el => {
+            el.style.color = t.accent1;
+            el.style.borderColor = t.accent1 + '44';
+        });
+        document.querySelectorAll('.pm_hero_line').forEach(el => {
+            el.style.background = `linear-gradient(90deg,${t.accent1} 0%,transparent 100%)`;
+        });
+        document.querySelectorAll('.pm_line--bright').forEach(el => {
+            el.style.background = t.accent1;
+            el.style.opacity = '0.7';
+        });
+        document.querySelectorAll('.pm_travel_pill').forEach(el => el.style.background = t.btnA);
+        document.querySelectorAll('.pm_fl_price--a').forEach(el => el.style.background = t.accent1);
+        document.querySelectorAll('.pm_fl_card--feat').forEach(el => {
+            el.style.borderColor = t.accent1 + '66';
+            el.style.boxShadow   = `0 0 16px ${t.badgeGlow}`;
+        });
+
+        /* Contact */
+        document.querySelectorAll('.contact-icon-email').forEach(el => {
+            el.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
+        });
+        document.querySelectorAll('.form_submit').forEach(el => {
+            el.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
+            el.style.boxShadow  = `0 4px 20px ${t.btnGlow}`;
+        });
+
+        /* Footer */
+        const fl = document.getElementById('footerLogo');
+        if (fl) fl.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
+
+        /* Cursor blob */
+        blob.style.background =
+            `radial-gradient(circle,${t.badgeGlow} 0%,transparent 70%)`;
+
+        /* CSS vars */
+        document.documentElement.style.setProperty('--accent-1',    t.accent1);
+        document.documentElement.style.setProperty('--accent-glow', t.badgeGlow);
+        document.documentElement.style.setProperty('--proj-btn-a',  t.btnA);
+        document.documentElement.style.setProperty('--proj-btn-b',  t.btnB);
+    }
+
+    applyTheme(themes[currentTheme]);
+    setInterval(() => {
+        currentTheme = (currentTheme + 1) % themes.length;
         applyTheme(themes[currentTheme]);
-        setInterval(() => {
-            currentTheme = (currentTheme + 1) % themes.length;
-            applyTheme(themes[currentTheme]);
-        }, 10000);
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        const barObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bar = entry.target.querySelector('.skill_bar');
-                    if (bar) bar.style.width = bar.getAttribute('data-width') + '%';
-                }
-            });
-        }, { threshold: 0.3 });
-        document.querySelectorAll('.skill_item').forEach(el => barObserver.observe(el));
+    }, 10000);
+
+    /* ══════════ SCROLL REVEAL ══════════ */
+    const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ══════════ SKILL BARS ══════════ */
+    const barObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target.querySelector('.skill_bar');
+                if (bar) bar.style.width = bar.getAttribute('data-width') + '%';
+            }
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill_item').forEach(el => barObserver.observe(el));
     </script>
 </body>
 </html>
