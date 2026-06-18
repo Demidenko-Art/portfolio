@@ -10,10 +10,10 @@
 <body>
 
     <div id="cursor-blob"></div>
+    <canvas id="confetti-canvas"></canvas>
     <div id="toast"><i class="fa-solid fa-check"></i> <span id="toast-msg">Copied!</span></div>
     <a id="scrollTop" href="#home" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
-    <!-- Mobile drawer -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#home"       class="active"><i class="fa-solid fa-house"></i> Home</a>
         <a href="#about">     <i class="fa-regular fa-user"></i> About</a>
@@ -64,8 +64,8 @@
                     Захоплений чистим кодом, приголомшливим дизайном та бездоганним UX.
                 </p>
                 <div class="hero-btns">
-                    <a href="#projects" class="btn-primary"><i class="fa-solid fa-rocket"></i> Explore My Universe</a>
-                    <a href="#" class="btn-secondary"><i class="fa-regular fa-file"></i> Download CV</a>
+                    <a href="#projects" class="btn-primary magnetic"><i class="fa-solid fa-rocket"></i> Explore My Universe</a>
+                    <a href="#" class="btn-secondary magnetic"><i class="fa-regular fa-file"></i> Download CV</a>
                 </div>
                 <div class="hero-socials">
                     <a href="https://github.com/Demidenko-Art" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -77,7 +77,6 @@
 
         <p class="scroll-hint">Scroll to explore</p>
 
-        <!-- ABOUT -->
         <div class="abot_me" id="about">
             <h2>About Me</h2>
             <div class="palka"></div>
@@ -107,7 +106,6 @@
             </div>
         </div>
 
-        <!-- EXPERIENCE -->
         <section class="section_block" id="experience">
             <h2 class="section_title reveal">Experience</h2>
             <div class="palka section_palka reveal"></div>
@@ -170,12 +168,9 @@
                         </div>
                     </div>
                 </div>
-
-                
             </div>
         </section>
 
-        <!-- SKILLS -->
         <section class="section_block" id="skills">
             <h2 class="section_title reveal">Skills &amp; Technologies</h2>
             <div class="palka section_palka reveal"></div>
@@ -220,8 +215,7 @@
             </div>
         </section>
 
-        <!-- FEATURED PROJECTS -->
-<section class="section_block" id="projects">
+        <section class="section_block" id="projects">
             <h2 class="section_title reveal">Featured Projects</h2>
             <div class="palka section_palka reveal"></div>
             <p class="ppp reveal">Things I've <strong class="about_strong">built</strong> with passion &amp; <strong class="about_strong2">purpose</strong></p>
@@ -243,7 +237,7 @@
                             <span class="p_tag">React</span><span class="p_tag">Nova Poshta API</span><span class="p_tag">JavaScript</span><span class="p_tag">CSS3</span>
                         </div>
                         <div class="proj_links">
-                            <a href="#" class="proj_btn proj_btn--primary"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                            <a href="#" class="proj_btn proj_btn--primary magnetic"><i class="fa-solid fa-rocket"></i> Live Demo</a>
                             <a href="#" class="proj_btn proj_btn--ghost"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -264,7 +258,7 @@
                             <span class="p_tag">HTML5</span><span class="p_tag">CSS3</span><span class="p_tag">JavaScript</span><span class="p_tag">Responsive</span>
                         </div>
                         <div class="proj_links">
-                            <a href="#" class="proj_btn proj_btn--primary"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                            <a href="#" class="proj_btn proj_btn--primary magnetic"><i class="fa-solid fa-rocket"></i> Live Demo</a>
                             <a href="#" class="proj_btn proj_btn--ghost"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -285,7 +279,7 @@
                             <span class="p_tag">React</span><span class="p_tag">Music API</span><span class="p_tag">Git</span><span class="p_tag">Teamwork</span>
                         </div>
                         <div class="proj_links">
-                            <a href="#" class="proj_btn proj_btn--primary"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                            <a href="#" class="proj_btn proj_btn--primary magnetic"><i class="fa-solid fa-rocket"></i> Live Demo</a>
                             <a href="#" class="proj_btn proj_btn--ghost"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -294,7 +288,6 @@
             </div>
         </section>
 
-        <!-- GET IN TOUCH -->
         <section class="section_block contact_section" id="contact">
             <h2 class="section_title reveal">Get in Touch</h2>
             <div class="palka section_palka reveal"></div>
@@ -349,7 +342,7 @@
                             <label class="form_label">Message</label>
                             <textarea class="form_input form_textarea" placeholder="Розкажи про свій проєкт..."></textarea>
                         </div>
-                        <button type="submit" class="form_submit">
+                        <button type="submit" class="form_submit magnetic">
                             <span class="form_submit_text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
                             <span class="form_submit_sent" style="display:none"><i class="fa-solid fa-check"></i> Sent!</span>
                         </button>
@@ -358,9 +351,8 @@
             </div>
         </section>
 
-    </div><!-- /.box -->
+    </div>
 
-    <!-- FOOTER -->
     <footer class="site_footer">
         <div class="footer_inner">
             <div class="footer_brand">
@@ -391,7 +383,6 @@
     </footer>
 
     <script>
-    /* ══════════ CURSOR BLOB ══════════ */
     const blob = document.getElementById('cursor-blob');
     let blobX = 0, blobY = 0, mouseX = 0, mouseY = 0;
     document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
@@ -403,7 +394,6 @@
         requestAnimationFrame(animateBlob);
     })();
 
-    /* ══════════ BURGER MENU ══════════ */
     const burger     = document.getElementById('burger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -421,7 +411,6 @@
         });
     });
 
-    // Close on outside click
     document.addEventListener('click', e => {
         if (!burger.contains(e.target) && !mobileMenu.contains(e.target)) {
             burger.classList.remove('open');
@@ -430,13 +419,11 @@
         }
     });
 
-    /* ══════════ SCROLL-TO-TOP ══════════ */
     const scrollTopBtn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
         scrollTopBtn.classList.toggle('visible', window.scrollY > 600);
     });
 
-    /* ══════════ TOAST ══════════ */
     function showToast(msg) {
         const t = document.getElementById('toast');
         document.getElementById('toast-msg').textContent = msg;
@@ -447,7 +434,6 @@
         navigator.clipboard.writeText(text).then(() => showToast(msg || 'Copied!'));
     }
 
-    /* ══════════ SMOOTH SCROLL & ACTIVE NAV ══════════ */
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             const id = this.getAttribute('href');
@@ -473,20 +459,17 @@
         allSections.forEach(sec => {
             if (window.scrollY >= sec.offsetTop - 140) current = sec.getAttribute('id');
         });
-        // desktop nav
         navItems.forEach(li => {
             li.classList.remove('active');
             const a = li.querySelector('a');
             if (a && a.getAttribute('href') === '#' + current) li.classList.add('active');
         });
-        // mobile menu
         mobileMenu.querySelectorAll('a').forEach(a => {
             a.classList.toggle('active', a.getAttribute('href') === '#' + current);
         });
     }
     window.addEventListener('scroll', updateActiveNav);
 
-    /* ══════════ COUNT-UP ══════════ */
     function animateCountUp(el) {
         const target = parseInt(el.dataset.target);
         const suffix = el.dataset.suffix || '';
@@ -513,7 +496,61 @@
     }, { threshold: 0.5 });
     document.querySelectorAll('.stat_num[data-target]').forEach(el => statsObserver.observe(el));
 
-    /* ══════════ FORM SUBMIT ══════════ */
+    function fireConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.classList.add('show');
+
+        const colors = ['#a78bfa', '#ec4899', '#f97316', '#818cf8', '#fb923c'];
+        const pieces = Array.from({ length: 90 }, () => ({
+            x: canvas.width / 2 + (Math.random() - 0.5) * 160,
+            y: canvas.height * 0.62,
+            vx: (Math.random() - 0.5) * 11,
+            vy: -Math.random() * 13 - 4,
+            size: Math.random() * 7 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rot: Math.random() * 360,
+            vr: (Math.random() - 0.5) * 14,
+            shape: Math.random() > 0.5 ? 'rect' : 'circle'
+        }));
+
+        let frame = 0;
+        const maxFrames = 130;
+
+        function loop() {
+            frame++;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            pieces.forEach(p => {
+                p.vy += 0.32;
+                p.x += p.vx;
+                p.y += p.vy;
+                p.rot += p.vr;
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.rot * Math.PI / 180);
+                ctx.fillStyle = p.color;
+                ctx.globalAlpha = Math.max(0, 1 - frame / maxFrames);
+                if (p.shape === 'rect') {
+                    ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+            });
+            if (frame < maxFrames) {
+                requestAnimationFrame(loop);
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                canvas.classList.remove('show');
+            }
+        }
+        loop();
+    }
+
     function handleFormSubmit(e) {
         e.preventDefault();
         const btn    = e.target.querySelector('.form_submit');
@@ -523,6 +560,7 @@
         sentEl.style.display = 'flex';
         btn.style.opacity = '0.8';
         showToast('Повідомлення надіслано! 🎉');
+        fireConfetti();
         setTimeout(() => {
             textEl.style.display = 'flex';
             sentEl.style.display = 'none';
@@ -531,7 +569,18 @@
         }, 2800);
     }
 
-    /* ══════════ THEME CYCLING ══════════ */
+    document.querySelectorAll('.magnetic').forEach(el => {
+        el.addEventListener('mousemove', e => {
+            const r = el.getBoundingClientRect();
+            const x = e.clientX - r.left - r.width / 2;
+            const y = e.clientY - r.top - r.height / 2;
+            el.style.transform = `translate(${x * 0.18}px, ${y * 0.35}px)`;
+        });
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = 'translate(0, 0)';
+        });
+    });
+
     const themes = [
         {
             kolo:'#7c3aed', h2:'#a78bfa', badge:'#7c3aed', badgeGlow:'rgba(124,58,237,0.4)',
@@ -556,6 +605,38 @@
             divider:'#f97316, #fbbf24',
             accent1:'#fb923c', accent2:'#f59e0b',
             btnA:'#c2410c', btnB:'#f97316', btnGlow:'rgba(249,115,22,0.5)',
+        },
+        {
+            kolo:'#0ea5e9', h2:'#38bdf8', badge:'#0ea5e9', badgeGlow:'rgba(14,165,233,0.4)',
+            line1a:'#38bdf8', line1b:'#0ea5e9', line1c:'#6366f1',
+            codera:'#0ea5e9', coderb:'#6366f1',
+            divider:'#0ea5e9, #6366f1',
+            accent1:'#38bdf8', accent2:'#6366f1',
+            btnA:'#0369a1', btnB:'#0ea5e9', btnGlow:'rgba(14,165,233,0.5)',
+        },
+        {
+            kolo:'#10b981', h2:'#34d399', badge:'#10b981', badgeGlow:'rgba(16,185,129,0.4)',
+            line1a:'#34d399', line1b:'#10b981', line1c:'#2dd4bf',
+            codera:'#10b981', coderb:'#2dd4bf',
+            divider:'#10b981, #2dd4bf',
+            accent1:'#34d399', accent2:'#2dd4bf',
+            btnA:'#047857', btnB:'#10b981', btnGlow:'rgba(16,185,129,0.5)',
+        },
+        {
+            kolo:'#e11d48', h2:'#fb7185', badge:'#e11d48', badgeGlow:'rgba(225,29,72,0.4)',
+            line1a:'#fb7185', line1b:'#e11d48', line1c:'#f43f5e',
+            codera:'#e11d48', coderb:'#be123c',
+            divider:'#e11d48, #f43f5e',
+            accent1:'#fb7185', accent2:'#e11d48',
+            btnA:'#9f1239', btnB:'#e11d48', btnGlow:'rgba(225,29,72,0.5)',
+        },
+        {
+            kolo:'#71717a', h2:'#e4e4e7', badge:'#a1a1aa', badgeGlow:'rgba(255,255,255,0.18)',
+            line1a:'#d4d4d8', line1b:'#a1a1aa', line1c:'#fafafa',
+            codera:'#e4e4e7', coderb:'#a1a1aa',
+            divider:'#a1a1aa, #fafafa',
+            accent1:'#d4d4d8', accent2:'#a1a1aa',
+            btnA:'#3f3f46', btnB:'#71717a', btnGlow:'rgba(255,255,255,0.22)',
         },
     ];
     let currentTheme = 0;
@@ -619,7 +700,6 @@
         document.querySelectorAll('.skill_pct').forEach(el => el.style.color = t.accent1);
         document.querySelectorAll('.skill_cat_icon').forEach(el => el.style.color = t.accent1);
 
-        /* Projects */
         document.querySelectorAll('.proj_num').forEach(el => el.style.color = t.accent1);
         document.querySelectorAll('.p_tag').forEach(el => {
             el.style.borderColor = t.accent1 + '55';
@@ -647,7 +727,6 @@
             el.style.boxShadow   = `0 0 16px ${t.badgeGlow}`;
         });
 
-        /* Contact */
         document.querySelectorAll('.contact-icon-email').forEach(el => {
             el.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
         });
@@ -656,15 +735,12 @@
             el.style.boxShadow  = `0 4px 20px ${t.btnGlow}`;
         });
 
-        /* Footer */
         const fl = document.getElementById('footerLogo');
         if (fl) fl.style.background = `linear-gradient(135deg,${t.btnA},${t.btnB})`;
 
-        /* Cursor blob */
         blob.style.background =
             `radial-gradient(circle,${t.badgeGlow} 0%,transparent 70%)`;
 
-        /* CSS vars */
         document.documentElement.style.setProperty('--accent-1',    t.accent1);
         document.documentElement.style.setProperty('--accent-glow', t.badgeGlow);
         document.documentElement.style.setProperty('--proj-btn-a',  t.btnA);
@@ -677,13 +753,11 @@
         applyTheme(themes[currentTheme]);
     }, 10000);
 
-    /* ══════════ SCROLL REVEAL ══════════ */
     const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    /* ══════════ SKILL BARS ══════════ */
     const barObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -693,6 +767,16 @@
         });
     }, { threshold: 0.3 });
     document.querySelectorAll('.skill_item').forEach(el => barObserver.observe(el));
+
+    let lastScrollY = window.scrollY;
+    const heroBox = document.querySelector('.header_box');
+    window.addEventListener('scroll', () => {
+        lastScrollY = window.scrollY;
+        if (heroBox && lastScrollY < window.innerHeight) {
+            heroBox.style.transform = `translateY(${lastScrollY * 0.15}px)`;
+            heroBox.style.opacity = Math.max(0, 1 - lastScrollY / 700);
+        }
+    });
     </script>
 </body>
 </html>
