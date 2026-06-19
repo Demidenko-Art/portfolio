@@ -485,7 +485,7 @@ header {
 .stat_green  { transition: color 1.5s ease; }
 
 .about_left {
-    width: 46%;
+    width: 36%;
     height: 580px;
     background: #0e0e0e;
     border-radius: 16px;
